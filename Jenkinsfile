@@ -38,7 +38,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                sh "docker Frun -d -p 80:80 --name my-web ${DOCKER_IMAGE_NAME}" // Corrected the container name and used the image variable
+                sh "docker run -d -p 80:80 --name my-web 2024dock/my-web:v1" // Corrected the container name and used the image variable
             }
         }
     }
